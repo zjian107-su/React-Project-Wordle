@@ -16,9 +16,9 @@ function GuessInput() {
       <label htmlFor="guess-input">Enter guess:</label>
       <input
         required
-        minLength={5}
+        minLength={5} // Works only if you pressed shift key
         maxLength={5}
-        pattern="[a-zA-Z]{5}"
+        pattern="[a-zA-Z]{5}" // To fix the above cap issue
         title="5 letter word"
         value={guess}
         onChange={(event) => {
