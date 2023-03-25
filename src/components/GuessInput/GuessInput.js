@@ -5,7 +5,6 @@ function GuessInput({ handleSubmitGuess }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(tentativeGuess);
     handleSubmitGuess(tentativeGuess);
     setTentativeGuess("");
   }
@@ -22,7 +21,7 @@ function GuessInput({ handleSubmitGuess }) {
         value={tentativeGuess}
         onChange={(event) => {
           const nextGuess = event.target.value;
-          setTentativeGuess(nextGuess);
+          setTentativeGuess(nextGuess.toUpperCase());
         }}
         id="guess-input"
         type="text"
