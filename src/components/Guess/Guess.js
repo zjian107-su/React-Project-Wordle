@@ -10,7 +10,7 @@ function Cell({ letter, status }) {
 
 function Guess({ guess, answer }) {
   const result = checkGuess(guess, answer);
-  console.log(result);
+  // console.log(result); // DEBUG: LOG CHECKS
 
   return (
     <p className="guess">
